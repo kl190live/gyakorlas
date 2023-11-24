@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Új termék</h1>
+    <form method="post">
+      <label>
+        serial number:<br>
+        <input type="text" name="serialnumber">
+      </label>
+      <label>
+        condition:<br>
+        <input type="text" name="condition">
+      </label>
+      <label>
+        name:<br>
+        <input type="text" name="name">
+      </label>
+    </form>
+    <% if(errors){
+      errors.forEach((msg) => { %>
+       <p class="errorMessage"><%= msg %></p> 
+      <%});
+    } %>
+</body>
+</html>
